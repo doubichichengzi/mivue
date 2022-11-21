@@ -1,0 +1,18 @@
+@mixin cart-img($imgname: 'icon-cart.png') {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin-right: 4px;
+    background: url('/public/imgs/' +$imgname) no-repeat center;
+    background-size: contain; //填充
+
+}
+
+@mixin container-base {
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between; //水平居中
+    align-items: center; //垂直居中
+}

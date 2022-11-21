@@ -1,0 +1,12 @@
+@mixin flex($jusc:space-between,$alit:center){
+    display: flex;/*flex弹性盒子 */
+    justify-content: $jusc;/*在弹性盒对象的 <div> 元素中的各项周围留有空白：均匀排列每个元素 首个元素放置于起点，末尾元素放置于终点 */
+    align-items: $alit;/*居中对齐弹性盒的各项 <div> 元素：*/
+}
+@mixin bgImg($width:0,$height:0,$url:"",$size:contain){
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background: url($url) no-repeat center center;
+    background-size: $size; /*此时会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小。*/
+}

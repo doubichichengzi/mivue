@@ -1,0 +1,82 @@
+.modal {
+    position: fixed;
+    z-index: 99;
+    transition: all .5s;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .mask {
+        position: fixed;
+        opacity: 0.5;
+        background-color: $colorI;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &.slider-enter {
+        top: -100%;
+    }
+
+    &.slider-enter-active {
+        // to  插入之前  active 过度时间生效
+        top: 0;
+    }
+
+    &.slider-leave-active {
+        top: -100%;
+    }
+
+    .modal-dialog {
+        position: absolute;
+        top: 40%; //只是将盒子放在了 设定位置 但是没有从盒子中心居中
+        left: 50%;
+        width: 660px;
+        height: auto;
+        background-color: $colorG;
+        transform: translate(-50%, -50%); //从xy轴 偏移自己的一半，达到盒子中心位置
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+
+        .m-header {
+            height: 60px;
+            background-color: $colorJ;
+            line-height: 60px;
+            padding: 0 25px;
+            font-size: 16px;
+            position: relative;
+
+            .m-close {
+                position: absolute;
+                top: 23px;
+                right: 22px;
+                background: url(/public/imgs/icon-close.png) no-repeat center;
+                background-size: contain;
+                width: 14px;
+                height: 14px;
+                transition: transform .3s;
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+
+        .m-body {
+            padding: 42px 40px 50px;
+            font-size: 14px;
+        }
+
+        .m-footer {
+            height: 82px;
+            line-height: 82px;
+            text-align: center;
+            background-color: $colorJ;
+
+        }
+
+    }
+}
